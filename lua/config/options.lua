@@ -2,9 +2,6 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 vim.opt.scrolloff = 14 -- Keep 12 lines above/below cursor when scrolling
-vim.opt.wrap = false -- Don't wrap long lines
-vim.opt.cursorline = true -- Highlight the current line
-vim.opt.showmatch = true -- Highlight matching brackets
 vim.opt.ignorecase = true -- Ignore case when searching
 vim.opt.smartcase = true -- Unless uppercase is used in search
 -- Some nice ones for visual feedback
