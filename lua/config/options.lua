@@ -5,7 +5,7 @@
 vim.opt.scrolloff = 14 -- Keep 12 lines above/below cursor when scrolling
 vim.opt.ignorecase = true -- Ignore case when searching
 vim.opt.smartcase = true -- Unless uppercase is used in search
-
+vim.opt.guifont = "JetBrainsMono Nerd Font:h16"
 -- Fix for confirmation dialogs
 vim.opt.confirm = true -- Show dialog boxes instead of command-line messages
 local shortmess = vim.o.shortmess:gsub("F", "") -- Remove 'F' from shortmess
