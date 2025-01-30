@@ -2,9 +2,7 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 vim.keymap.set("n", "<Tab>", ":", { noremap = true })
--- (maybe use K? )
-vim.keymap.set({ "n", "o" }, "ñ", "}", { desc = "Next paragraph" })
-vim.keymap.set({ "n", "o" }, "Ñ", "{", { desc = "Previous paragraph" })
+vim.keymap.set("n", "<C-a>", "gg0VG", { desc = "Select all" })
 -- move lines up and down in visual mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv", { desc = "Move line down" })
 vim.keymap.set("v", "K", ":m '<-2<CR>gv", { desc = "Move line up" })
