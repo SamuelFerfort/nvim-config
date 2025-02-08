@@ -2,6 +2,27 @@ return {
   "hrsh7th/nvim-cmp",
   opts = function(_, opts)
     local cmp = require("cmp")
+    -- Style customization to match coding.blink appearance
+    --
+    -- Get colors from your current theme
+    local normal_bg = vim.api.nvim_get_hl(0, { name = "Normal" }).bg
+    local float_bg = vim.api.nvim_get_hl(0, { name = "Float" }).bg or normal_bg
+    local border_fg = vim.api.nvim_get_hl(0, { name = "FloatBorder" }).fg or normal_bg
+
+    opts.window = {
+      completion = {
+        border = "rounded",
+        winhighlight = "Normal:CmpNormal",
+      },
+      documentation = {
+        border = "rounded",
+        winhighlight = "Normal:CmpDocNormal",
+      },
+    }
+    -- Use theme colors but force no transparency
+    vim.api.nvim_set_hl(0, "CmpNormal", { bg = float_bg, blend = 0 })
+    vim.api.nvim_set_hl(0, "CmpDocNormal", { bg = float_bg, blend = 0 })
+    vim.api.nvim_set_hl(0, "CmpBorder", { fg = border_fg, bg = float_bg })
 
     -- We're extending the default mappings rather than overwriting them
     -- This way we keep the good defaults and just add our customizations
